@@ -68,8 +68,8 @@
                         <div class="flex flex-wrap items-center gap-4">
                             <button wire:click="addToCart({{ $product->id }})"
                                 class="w-full p-4 bg-blue-500 rounded-md lg:w-2/5 dark:text-gray-200 text-gray-50 hover:bg-blue-600 dark:bg-blue-500 dark:hover:bg-blue-700">
-                                <span wire:loading.remove> Add to cart </span>
-                                <span wire:loading role='status' aria-label='loading'>
+                                <span wire:loading.remove wire:target="addToCart({{ $product->id }})"> Add to cart </span>
+                                <span wire:loading wire:target="addToCart({{ $product->id }})" role='status' aria-label='loading'>
                                     <svg class='w-6 h-6 stroke-indigo-600 animate-spin ' viewBox='0 0 24 24'
                                         fill='none' xmlns='http://www.w3.org/2000/svg'>
                                         <g clip-path='url(#clip0_9023_61563)'>
