@@ -58,7 +58,7 @@
                                     <label for="password" class="block text-sm mb-2 dark:text-white">Password</label>
                                     <a wire:navigate
                                         class="text-sm text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                        href="/forgot">Forgot password?</a>
+                                        href="{{ route('password.request') }}">Forgot password?</a>
                                 </div>
                                 <div class="relative">
                                     <input type="password" id="password" wire:model="password"
@@ -84,7 +84,7 @@
                                 class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Sign
                                 in</button>
 
-                            <button wire:loading type="submit"
+                            <button wire:loading type="button"
                                 class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                                 <div role="status">
                                     <svg aria-hidden="true"
