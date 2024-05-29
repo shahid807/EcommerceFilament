@@ -58,7 +58,7 @@ class ResetPasswordPage extends Component
             }
         );
 
-        return $status === Password::PASSWORD_RESET ? redirect()->route('login') : session()->flash('error', 'something went wrong');
+        return $status === Password::PASSWORD_RESET ? redirect()->route('login')->with('passwordChanged', 'Password changed successfully') : session()->flash('error', 'something went wrong');
     }
 
     public function render()

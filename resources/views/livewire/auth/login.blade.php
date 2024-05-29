@@ -22,6 +22,18 @@
                             </div>
                         @endsession
 
+                        @session('passwordChanged')
+                        <div role="alert">
+                            <div
+                                class="border border-t-0 border-green-400 rounded-b bg-green-100 px-4 py-3 text-green-700 my-4">
+                                <p> {{ Session::get('passwordChanged') }} </p>
+                            </div>
+                        </div>
+                    @endsession
+
+
+                        
+
                     </div>
 
                     <hr class="my-5 border-slate-300">
